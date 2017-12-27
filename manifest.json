@@ -1,0 +1,12 @@
+{
+    "name": "easyQrCode",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "a chrome plugin to make usefull qrcode",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "baidubox qrcode",
+        "default_popup": "popup.html"
+    },
+	"permissions": ["tabs"]
+}
