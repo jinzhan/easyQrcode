@@ -1,9 +1,9 @@
 (function () {
     let  createQrCode = ($el, url) => {
-        $($el).qrcode({
+        $($el).empty().qrcode({
             text: url,
-            width: 280,
-            height: 280
+            width: 200,
+            height: 200
         });
     };
 
@@ -12,11 +12,7 @@
         $($txt).on('keyup', function(){
             let val = $(this).val().trim() || url; 
             console.log({val});
-            $($el).empty().qrcode({
-                text: val,
-                width: 280,
-                height: 280
-            });
+            createQrCode($el, val);
         });
     };
 
@@ -24,6 +20,7 @@
         let url = 'baiduboxapp://v1/easybrowse/open?url=' + encodeURIComponent(tab.url);
         createQrCode('#baiduapp-qrcode .qrcode', url);
         createQrCode('#normal-qrcode .qrcode', tab.url);
+        createQrCode('#preview-qrcode .qrcode', 'http://baijiahao.baidu.com/hitpreview');
         bindTxt('#normal-qrcode .custom-qrcode-url', '#normal-qrcode .qrcode', tab.url);
     });
 })();

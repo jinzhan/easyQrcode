@@ -4,6 +4,7 @@
         padding: 40px;
         margin: 0;
     }
+
     .qrcode-list {
         display: flex;
         justify-content: space-between;
@@ -11,7 +12,7 @@
     }
 
     .qrcode-list .qrcode-item {
-        width: 280px;
+        width: 200px;
         text-align: center;
     }
 
@@ -23,10 +24,11 @@
     }
 
     .qrcode {
-        width: 280px;
-        height: 280px;
+        width: 200px;
+        height: 200px;
         background-color: #efefef;
     }
+
     .tip {
         color: #999;
         font-size: 12px;
@@ -55,6 +57,11 @@
     <div class="qrcode-item" id="normal-qrcode">
         <div class="qrcode"></div>
         <textarea class="custom-qrcode-url"></textarea>
+    </div>
+
+    <div class="qrcode-item" id="preview-qrcode">
+        <div class="qrcode"></div>
+        <p class="tip">orp_preview(orp_preview=1)</p>
     </div>
 </div>
 
